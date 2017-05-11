@@ -6,6 +6,11 @@
     "validateUpsert": true
   },
   "properties": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "item name"
+    },
     "description": {
       "type": "string",
       "required": true,
@@ -14,21 +19,16 @@
     "img": {
       "type": "string",
       "required": true,
-      "description": "item igm"
+      "description": "location of item image"
     },
     "img_alt": {
       "type": "string",
       "required": true,
-      "description": "img item title"
-    },
-    "name": {
-      "type": "string",
-      "required": true,
-      "description": "item name"
+      "description": "item image title"
     },
     "price": {
       "type": "number",
-      "required": false,
+      "required": true,
       "description": "item price"
     },
     "rating": {

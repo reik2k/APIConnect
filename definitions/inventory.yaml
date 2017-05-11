@@ -551,8 +551,6 @@ paths:
             type: file
       deprecated: false
 definitions:
-  x-any:
-    properties: {}
   review:
     properties:
       date:
@@ -578,17 +576,17 @@ definitions:
     additionalProperties: false
   item:
     properties:
+      name:
+        description: item name
+        type: string
       description:
         description: item description
         type: string
       img:
-        description: item igm
+        description: location of item image
         type: string
       img_alt:
-        description: img item title
-        type: string
-      name:
-        description: item name
+        description: item image title
         type: string
       price:
         description: item price
@@ -602,10 +600,11 @@ definitions:
         type: number
         format: double
     required:
+      - name
       - description
       - img
       - img_alt
-      - name
+      - price
     additionalProperties: false
   ObjectID:
     type: string
