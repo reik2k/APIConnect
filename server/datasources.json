@@ -1,0 +1,22 @@
+{
+  "mysql-connection": {
+    "host": "mysql.think.ibm",
+    "port": "3306",
+    "url": null,
+    "database": "think",
+    "password": "Passw0rd!",
+    "name": "mysql-connection",
+    "user": "student",
+    "connector": "mysql"
+  },
+  "mongodb-connection": {
+    "host": "mongo.think.ibm",
+    "port": 27017,
+    "url": "",
+    "database": "think",
+    "password": "",
+    "name": "mongodb-connection",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
