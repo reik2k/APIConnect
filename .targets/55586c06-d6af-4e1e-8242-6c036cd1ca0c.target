@@ -1,0 +1,39 @@
+type: onprem
+server:
+  host: mgr.think.ibm
+org:
+  url: 'https://mgr.think.ibm/v1/orgs/56fab1dfe4b075e7febc477d'
+  id: 56fab1dfe4b075e7febc477d
+  name: sales
+  status: active
+  orgType: apiProvider
+  displayName: Sales
+  advPortalOverride: true
+  extUaaAuthenticated: false
+  requiresSSLClientCertCheck: false
+catalog:
+  id: 56fab1dfe4b075e7febc4784
+  shortName: sb
+  name: Sandbox
+  sandbox: true
+app:
+  runtime: liberty
+  bluemix: null
+  liberty:
+    collectiveName: AppSvr
+    collectiveId: 56fd7a3de4b0715387db6eb7
+    applicationName: inventory
+    applicationId: 5914a8f6e4b07045705852f8
+    hostHeader: inventory.56fab1dfe4b075e7febc477d
+    username: student
+    password: '****************'
+    controllerHosts:
+      - host: appsvr.think.ibm
+        port: 9443
+  name: inventory
+  title: Inventory
+  id: 5914a8f6e4b07045705852f8
+  orgName: 56fab1dfe4b075e7febc477d
+  fullId: 'apic-app://mgr.think.ibm/orgs/56fab1dfe4b075e7febc477d/apps/inventory'
+id: 55586c06-d6af-4e1e-8242-6c036cd1ca0c
+target: 1.0.0

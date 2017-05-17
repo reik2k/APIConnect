@@ -1,0 +1,6 @@
+Running validation check on file: common/models/item.js 
+... Looks good!
+
+Running validation check on file: server/config.json 
+... Looks good!
+

@@ -1,0 +1,255 @@
+Running validation check on file: common/models/item.json 
+8a9,13
+>     "name": {
+>       "type": "string",
+>       "required": true,
+>       "description": "item name"
+>     },
+17c22
+<       "description": "item igm"
+---
+>       "description": "location of item image"
+22,27c27
+<       "description": "img item title"
+<     },
+<     "name": {
+<       "type": "string",
+<       "required": true,
+<       "description": "item name"
+---
+>       "description": "item image title"
+31c31
+<       "required": false,
+---
+>       "required": true,
+
+Running validation check on file: common/models/review.json 
+... Looks good!
+
+Running validation check on file: definitions/inventory.yaml 
+17c17
+<           description: item id
+---
+>           description: PersistedModel id
+41c41
+<           description: item id
+---
+>           description: PersistedModel id
+65c65
+<             $ref: '#/definitions/item'
+---
+>             $ref: '#/definitions/review'
+68c68
+<           description: item id
+---
+>           description: PersistedModel id
+92c92
+<           description: item id
+---
+>           description: PersistedModel id
+114c114
+<             $ref: '#/definitions/item'
+---
+>             $ref: '#/definitions/review'
+117c117
+<           description: item id
+---
+>           description: PersistedModel id
+135c135
+<           description: item id
+---
+>           description: PersistedModel id
+158c158
+<           description: item id
+---
+>           description: PersistedModel id
+194,213c194,195
+<       summary: Patch an existing model instance or insert a new one into the data source.
+<       operationId: item.upsert__put_items
+<       parameters:
+<         - name: data
+<           in: body
+<           description: Model instance data
+<           required: false
+<           schema:
+<             $ref: '#/definitions/item'
+<       responses:
+<         '200':
+<           description: Request was successful
+<           schema:
+<             $ref: '#/definitions/item'
+<       deprecated: false
+<     patch:
+<       tags:
+<         - item
+<       summary: Patch an existing model instance or insert a new one into the data source.
+<       operationId: item.upsert__patch_items
+---
+>       summary: Update an existing model instance or insert a new one into the data source.
+>       operationId: item.upsert
+235c217
+<           description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+---
+>           description: 'Filter defining fields, where, include, order, offset, and limit'
+247,290d228
+<   /items/replaceOrCreate:
+<     post:
+<       tags:
+<         - item
+<       summary: Replace an existing model instance or insert a new one into the data source.
+<       operationId: item.replaceOrCreate
+<       parameters:
+<         - name: data
+<           in: body
+<           description: Model instance data
+<           required: false
+<           schema:
+<             $ref: '#/definitions/item'
+<       responses:
+<         '200':
+<           description: Request was successful
+<           schema:
+<             $ref: '#/definitions/item'
+<       deprecated: false
+<   /items/upsertWithWhere:
+<     post:
+<       tags:
+<         - item
+<       summary: Update an existing model instance or insert a new one into the data source based on the where criteria.
+<       operationId: item.upsertWithWhere
+<       parameters:
+<         - name: where
+<           in: query
+<           description: Criteria to match model instances
+<           required: false
+<           type: string
+<           format: JSON
+<         - name: data
+<           in: body
+<           description: An object of model property name/value pairs
+<           required: false
+<           schema:
+<             $ref: '#/definitions/item'
+<       responses:
+<         '200':
+<           description: Request was successful
+<           schema:
+<             $ref: '#/definitions/item'
+<       deprecated: false
+338c276
+<       summary: 'Find a model instance by {{id}} from the data source.'
+---
+>       summary: Find a model instance by id from the data source.
+349c287
+<           description: 'Filter defining fields and include - must be a JSON-encoded string ({"something":"value"})'
+---
+>           description: Filter defining fields and include
+362c300
+<       summary: 'Delete a model instance by {{id}} from the data source.'
+---
+>       summary: Delete a model instance by id from the data source.
+380,381c318,319
+<       summary: Patch attributes for a model instance and persist it into the data source.
+<       operationId: 'item.prototype.updateAttributes__put_items_{id}'
+---
+>       summary: Update attributes for a model instance and persist it into the data source.
+>       operationId: item.prototype.updateAttributes
+391c329
+<           description: item id
+---
+>           description: PersistedModel id
+401,449d338
+<     patch:
+<       tags:
+<         - item
+<       summary: Patch attributes for a model instance and persist it into the data source.
+<       operationId: 'item.prototype.updateAttributes__patch_items_{id}'
+<       parameters:
+<         - name: data
+<           in: body
+<           description: An object of model property name/value pairs
+<           required: false
+<           schema:
+<             $ref: '#/definitions/item'
+<         - name: id
+<           in: path
+<           description: item id
+<           required: true
+<           type: string
+<           format: JSON
+<       responses:
+<         '200':
+<           description: Request was successful
+<           schema:
+<             $ref: '#/definitions/item'
+<       deprecated: false
+<   '/items/{id}/replace':
+<     post:
+<       tags:
+<         - item
+<       summary: Replace attributes for a model instance and persist it into the data source.
+<       operationId: item.replaceById
+<       parameters:
+<         - name: id
+<           in: path
+<           description: Model id
+<           required: true
+<           type: string
+<           format: JSON
+<         - name: data
+<           in: body
+<           description: Model instance data
+<           required: false
+<           schema:
+<             $ref: '#/definitions/item'
+<       responses:
+<         '200':
+<           description: Request was successful
+<           schema:
+<             $ref: '#/definitions/item'
+<       deprecated: false
+459c348
+<           description: 'Filter defining fields, where, include, order, offset, and limit - must be a JSON-encoded string ({"something":"value"})'
+---
+>           description: 'Filter defining fields, where, include, order, offset, and limit'
+473c362
+<       summary: 'Update instances of the model matched by {{where}} from the data source.'
+---
+>       summary: Update instances of the model matched by where from the data source.
+492c381
+<             description: Information related to the outcome of the operation
+---
+>             description: The number of instances updated
+580a470,472
+>       name:
+>         description: item name
+>         type: string
+585c477
+<         description: item igm
+---
+>         description: location of item image
+588,591c480
+<         description: img item title
+<         type: string
+<       name:
+<         description: item name
+---
+>         description: item image title
+604a494
+>       - name
+608c498
+<       - name
+---
+>       - price
+
+Running validation check on file: server/datasources.json 
+4,5c4,5
+<     "port": "3306",
+<     "url": null,
+---
+>     "port": 3306,
+>     "url": "",
+
+Running validation check on file: server/model-config.json 
+... Looks good!
+
