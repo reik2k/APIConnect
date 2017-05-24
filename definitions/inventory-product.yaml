@@ -8,6 +8,8 @@ apis:
     $ref: inventory.yaml
   oauth:
     $ref: oauth_1.0.0.yaml
+  financing:
+    $ref: financing_1.0.0.yaml
 visibility:
   view:
     type: public
