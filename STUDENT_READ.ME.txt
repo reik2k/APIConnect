@@ -1,0 +1,6 @@
+By Abel Prieto Benéitez
+La validación no funciona correctamente. Se ha generado en la carpeta
+de definitions el fichero logistics_1.0.0.yaml y otro en ThinkIBM/Student.
+En el primero se agregó lo que existía en la carpeta de lab5 y en el segundo el
+formado por el Student.
+Luego se validó y se corrigió los errores hasta que pasó la validación.
